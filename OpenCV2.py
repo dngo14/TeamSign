@@ -6,7 +6,7 @@ from keras.preprocessing.image import ImageDataGenerator
 data_gen = ImageDataGenerator(samplewise_center=True, samplewise_std_normalization=True)
 
 # Loading the model.
-MODEL_NAME = 'CNN_model.h5'  #########################################
+MODEL_NAME = "CNN_Model2.h5"  #########################################
 #MODEL_NAME = "RNN_model.h5" #########################################
 model = load_model(MODEL_NAME)
 
@@ -18,7 +18,7 @@ FRAME_SIZE = 300
 classes_file = open("classes.txt")
 classes_string = classes_file.readline()
 classes = classes_string.split()
-classes.sort()  # The predict function sends out output in sorted order.
+#classes.sort()
 
 # Preparing cv2 for webcam feed
 capture = cv2.VideoCapture(0)
@@ -34,11 +34,12 @@ while(True):
     resized_frame = cv2.resize(cropped_image, (INPUT_SIZE, INPUT_SIZE))
     reshaped_frame = (np.array(resized_frame)).reshape((1, INPUT_SIZE, INPUT_SIZE, 3)) #CNN
     #reshaped_frame = (np.array(resized_frame)).reshape((1, 1, INPUT_SIZE, INPUT_SIZE, 3)) #Add for LSTM
-    frame_for_model = data_gen.standardize(np.float64(reshaped_frame))
+    #frame_for_model = data_gen.standardize(np.float64(reshaped_frame))
 
     # Predicting the frame.
-    prediction = np.array(model.predict(frame_for_model))
+    prediction = np.array(model.predict(reshaped_frame))
     predicted_class = classes[prediction.argmax()]   
+    print(predicted_class)
 
     # Preparing output based on the model's confidence.
     prediction_probability = prediction[0, prediction.argmax()]
