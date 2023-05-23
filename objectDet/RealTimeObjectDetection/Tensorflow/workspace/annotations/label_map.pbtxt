@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 item { 
 	name:'hello'
 	id:1
@@ -18,3 +19,25 @@ item {
 	name:'i love you'
 	id:5
 }
+=======
+item { 
+	name:'hello'
+	id:1
+}
+item { 
+	name:'yes'
+	id:2
+}
+item { 
+	name:'no'
+	id:3
+}
+item { 
+	name:'thank you'
+	id:4
+}
+item { 
+	name:'i love you'
+	id:5
+}
+>>>>>>> ca217e5eede55c7bb75c01b4f962b9f24f19a443
