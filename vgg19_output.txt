@@ -1,0 +1,117 @@
+Model: "model_1"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_3 (InputLayer)        [(None, 50, 50, 3)]       0         
+                                                                 
+ block1_conv1 (Conv2D)       (None, 50, 50, 64)        1792      
+                                                                 
+ block1_conv2 (Conv2D)       (None, 50, 50, 64)        36928     
+                                                                 
+ block1_pool (MaxPooling2D)  (None, 25, 25, 64)        0         
+                                                                 
+ block2_conv1 (Conv2D)       (None, 25, 25, 128)       73856     
+                                                                 
+ block2_conv2 (Conv2D)       (None, 25, 25, 128)       147584    
+                                                                 
+ block2_pool (MaxPooling2D)  (None, 12, 12, 128)       0         
+                                                                 
+ block3_conv1 (Conv2D)       (None, 12, 12, 256)       295168    
+                                                                 
+ block3_conv2 (Conv2D)       (None, 12, 12, 256)       590080    
+                                                                 
+ block3_conv3 (Conv2D)       (None, 12, 12, 256)       590080    
+                                                                 
+ block3_conv4 (Conv2D)       (None, 12, 12, 256)       590080    
+                                                                 
+ block3_pool (MaxPooling2D)  (None, 6, 6, 256)         0         
+                                                                 
+ block4_conv1 (Conv2D)       (None, 6, 6, 512)         1180160   
+                                                                 
+ block4_conv2 (Conv2D)       (None, 6, 6, 512)         2359808   
+                                                                 
+ block4_conv3 (Conv2D)       (None, 6, 6, 512)         2359808   
+                                                                 
+ block4_conv4 (Conv2D)       (None, 6, 6, 512)         2359808   
+                                                                 
+ block4_pool (MaxPooling2D)  (None, 3, 3, 512)         0         
+                                                                 
+ block5_conv1 (Conv2D)       (None, 3, 3, 512)         2359808   
+                                                                 
+ block5_conv2 (Conv2D)       (None, 3, 3, 512)         2359808   
+                                                                 
+ block5_conv3 (Conv2D)       (None, 3, 3, 512)         2359808   
+                                                                 
+ block5_conv4 (Conv2D)       (None, 3, 3, 512)         2359808   
+                                                                 
+ block5_pool (MaxPooling2D)  (None, 1, 1, 512)         0         
+                                                                 
+ flatten_1 (Flatten)         (None, 512)               0         
+                                                                 
+ dense_1 (Dense)             (None, 29)                14877     
+                                                                 
+=================================================================
+Total params: 20,039,261
+Trainable params: 14,877
+Non-trainable params: 20,024,384
+_________________________________________________________________
+Epoch 1/10
+1360/1360 [==============================] - 355s 260ms/step - loss: 15.4121 - accuracy: 0.5329 - val_loss: 2.0915 - val_accuracy: 0.6238
+Epoch 2/10
+1360/1360 [==============================] - 356s 261ms/step - loss: 9.4051 - accuracy: 0.6688 - val_loss: 1.8900 - val_accuracy: 0.6874
+Epoch 3/10
+1360/1360 [==============================] - 356s 262ms/step - loss: 7.4674 - accuracy: 0.7085 - val_loss: 1.8040 - val_accuracy: 0.7161
+Epoch 4/10
+1360/1360 [==============================] - 356s 262ms/step - loss: 6.2790 - accuracy: 0.7328 - val_loss: 1.7549 - val_accuracy: 0.7480
+Epoch 5/10
+1360/1360 [==============================] - 355s 261ms/step - loss: 5.4316 - accuracy: 0.7525 - val_loss: 1.6973 - val_accuracy: 0.7628
+Epoch 6/10
+1360/1360 [==============================] - 355s 261ms/step - loss: 4.7897 - accuracy: 0.7671 - val_loss: 1.7211 - val_accuracy: 0.7652
+Epoch 7/10
+1360/1360 [==============================] - 355s 261ms/step - loss: 4.2905 - accuracy: 0.7794 - val_loss: 1.6989 - val_accuracy: 0.7866
+Epoch 8/10
+1360/1360 [==============================] - 355s 261ms/step - loss: 3.8888 - accuracy: 0.7894 - val_loss: 1.7083 - val_accuracy: 0.7944
+Epoch 9/10
+1360/1360 [==============================] - 358s 264ms/step - loss: 3.5538 - accuracy: 0.7979 - val_loss: 1.7188 - val_accuracy: 0.8058
+Epoch 10/10
+1360/1360 [==============================] - 356s 262ms/step - loss: 3.2711 - accuracy: 0.8049 - val_loss: 1.7319 - val_accuracy: 0.8121
+
+Keras CNN - accuracy: 0.8120689392089844 
+
+544/544 [==============================] - 101s 185ms/step
+
+              precision    recall  f1-score   support
+
+           A       0.79      0.92      0.85       589
+           B       0.93      0.84      0.88       624
+           C       0.99      0.97      0.98       622
+           D       0.93      0.99      0.96       615
+           E       0.95      0.80      0.87       623
+           F       0.82      0.99      0.90       571
+           G       0.97      0.88      0.92       570
+           H       0.94      0.99      0.97       624
+           I       0.83      0.89      0.86       570
+           J       0.93      0.98      0.95       572
+           K       0.64      0.93      0.76       599
+           L       0.00      0.00      0.00       568
+           M       0.52      0.98      0.68       585
+           N       0.98      0.55      0.70       605
+           O       0.98      0.94      0.96       608
+           P       0.94      0.97      0.96       586
+           Q       0.95      0.99      0.97       592
+           R       0.50      0.95      0.66       609
+           S       0.96      0.19      0.32       597
+           T       0.62      0.93      0.75       607
+           U       0.91      0.23      0.36       605
+           V       0.00      0.00      0.00       605
+           W       0.70      0.94      0.81       611
+           X       0.59      0.92      0.72       641
+           Y       0.90      0.90      0.90       596
+           Z       0.91      0.95      0.93       620
+         del       0.93      0.99      0.96       584
+     nothing       1.00      1.00      1.00       618
+       space       0.99      0.91      0.95       584
+
+    accuracy                           0.81     17400
+   macro avg       0.80      0.81      0.78     17400
+weighted avg       0.80      0.81      0.78     17400

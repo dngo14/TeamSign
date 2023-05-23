@@ -1,0 +1,52 @@
+Model: "sequential_1"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ lstm_1 (LSTM)               (None, 100)               66000     
+                                                                 
+ batch_normalization_1 (Batc  (None, 100)              400       
+ hNormalization)                                                 
+                                                                 
+ flatten_1 (Flatten)         (None, 100)               0         
+                                                                 
+ dense_3 (Dense)             (None, 124)               12524     
+                                                                 
+ dense_4 (Dense)             (None, 64)                8000      
+                                                                 
+ dense_5 (Dense)             (None, 27)                1755      
+                                                                 
+=================================================================
+Total params: 88,679
+Trainable params: 88,479
+Non-trainable params: 200
+_________________________________________________________________
+Epoch 1/15
+1445/1445 [==============================] - 53s 36ms/step - loss: 2.5343 - accuracy: 0.1785 - val_loss: 5.6534 - val_accuracy: 0.0321
+Epoch 2/15
+1445/1445 [==============================] - 53s 36ms/step - loss: 1.8947 - accuracy: 0.2809 - val_loss: 6.9200 - val_accuracy: 0.0301
+Epoch 3/15
+1445/1445 [==============================] - 53s 37ms/step - loss: 1.5324 - accuracy: 0.3444 - val_loss: 8.2879 - val_accuracy: 0.0229
+Epoch 4/15
+1445/1445 [==============================] - 53s 37ms/step - loss: 1.3198 - accuracy: 0.3816 - val_loss: 8.9418 - val_accuracy: 0.0503
+Epoch 5/15
+1445/1445 [==============================] - 54s 37ms/step - loss: 1.1841 - accuracy: 0.4159 - val_loss: 9.8164 - val_accuracy: 0.0523
+Epoch 6/15
+1445/1445 [==============================] - 54s 37ms/step - loss: 1.0994 - accuracy: 0.4255 - val_loss: 10.3440 - val_accuracy: 0.0323
+Epoch 7/15
+1445/1445 [==============================] - 54s 38ms/step - loss: 1.0376 - accuracy: 0.4330 - val_loss: 10.7546 - val_accuracy: 0.0068
+Epoch 8/15
+1445/1445 [==============================] - 54s 37ms/step - loss: 0.9929 - accuracy: 0.4426 - val_loss: 11.3042 - val_accuracy: 0.0573
+Epoch 9/15
+1445/1445 [==============================] - 54s 37ms/step - loss: 0.9494 - accuracy: 0.4500 - val_loss: 11.6015 - val_accuracy: 0.0325
+Epoch 10/15
+1445/1445 [==============================] - 55s 38ms/step - loss: 0.9222 - accuracy: 0.4560 - val_loss: 11.6976 - val_accuracy: 0.0130
+Epoch 11/15
+1445/1445 [==============================] - 54s 38ms/step - loss: 0.8983 - accuracy: 0.4657 - val_loss: 12.4066 - val_accuracy: 0.0467
+Epoch 12/15
+1445/1445 [==============================] - 55s 38ms/step - loss: 0.8798 - accuracy: 0.4654 - val_loss: 11.7943 - val_accuracy: 0.0179
+Epoch 13/15
+1445/1445 [==============================] - 55s 38ms/step - loss: 0.8711 - accuracy: 0.4669 - val_loss: 12.2362 - val_accuracy: 0.0242
+Epoch 14/15
+1445/1445 [==============================] - 54s 37ms/step - loss: 0.8526 - accuracy: 0.4680 - val_loss: 12.6581 - val_accuracy: 0.0641
+Epoch 15/15
+1445/1445 [==============================] - 54s 38ms/step - loss: 0.8476 - accuracy: 0.4722 - val_loss: 11.5568 - val_accuracy: 0.0331

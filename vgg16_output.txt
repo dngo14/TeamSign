@@ -1,0 +1,73 @@
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_2 (InputLayer)        [(None, 50, 50, 3)]       0         
+                                                                 
+ block1_conv1 (Conv2D)       (None, 50, 50, 64)        1792      
+                                                                 
+ block1_conv2 (Conv2D)       (None, 50, 50, 64)        36928     
+                                                                 
+ block1_pool (MaxPooling2D)  (None, 25, 25, 64)        0         
+                                                                 
+ block2_conv1 (Conv2D)       (None, 25, 25, 128)       73856     
+                                                                 
+ block2_conv2 (Conv2D)       (None, 25, 25, 128)       147584    
+                                                                 
+ block2_pool (MaxPooling2D)  (None, 12, 12, 128)       0         
+                                                                 
+ block3_conv1 (Conv2D)       (None, 12, 12, 256)       295168    
+                                                                 
+ block3_conv2 (Conv2D)       (None, 12, 12, 256)       590080    
+                                                                 
+ block3_conv3 (Conv2D)       (None, 12, 12, 256)       590080    
+                                                                 
+ block3_pool (MaxPooling2D)  (None, 6, 6, 256)         0         
+                                                                 
+ block4_conv1 (Conv2D)       (None, 6, 6, 512)         1180160   
+                                                                 
+ block4_conv2 (Conv2D)       (None, 6, 6, 512)         2359808   
+                                                                 
+ block4_conv3 (Conv2D)       (None, 6, 6, 512)         2359808   
+                                                                 
+ block4_pool (MaxPooling2D)  (None, 3, 3, 512)         0         
+                                                                 
+ block5_conv1 (Conv2D)       (None, 3, 3, 512)         2359808   
+                                                                 
+ block5_conv2 (Conv2D)       (None, 3, 3, 512)         2359808   
+                                                                 
+ block5_conv3 (Conv2D)       (None, 3, 3, 512)         2359808   
+                                                                 
+ block5_pool (MaxPooling2D)  (None, 1, 1, 512)         0         
+                                                                 
+ flatten (Flatten)           (None, 512)               0         
+                                                                 
+ dense (Dense)               (None, 29)                14877     
+                                                                 
+=================================================================
+Total params: 14,729,565
+Trainable params: 14,877
+Non-trainable params: 14,714,688
+_________________________________________________________________
+Epoch 1/10
+1360/1360 [==============================] - 287s 211ms/step - loss: 20.8193 - accuracy: 0.4245 - val_loss: 2.1564 - val_accuracy: 0.5887
+Epoch 2/10
+1360/1360 [==============================] - 289s 212ms/step - loss: 11.0853 - accuracy: 0.6437 - val_loss: 1.8451 - val_accuracy: 0.6804
+Epoch 3/10
+1360/1360 [==============================] - 289s 213ms/step - loss: 8.0407 - accuracy: 0.7073 - val_loss: 1.6815 - val_accuracy: 0.7254
+Epoch 4/10
+1360/1360 [==============================] - 288s 212ms/step - loss: 6.3856 - accuracy: 0.7417 - val_loss: 1.6293 - val_accuracy: 0.7524
+Epoch 5/10
+1360/1360 [==============================] - 288s 212ms/step - loss: 5.3077 - accuracy: 0.7654 - val_loss: 1.5541 - val_accuracy: 0.7757
+Epoch 6/10
+1360/1360 [==============================] - 287s 211ms/step - loss: 4.5476 - accuracy: 0.7827 - val_loss: 1.5434 - val_accuracy: 0.7926
+Epoch 7/10
+1360/1360 [==============================] - 288s 212ms/step - loss: 3.9723 - accuracy: 0.7954 - val_loss: 1.5376 - val_accuracy: 0.8060
+Epoch 8/10
+1360/1360 [==============================] - 288s 212ms/step - loss: 3.5266 - accuracy: 0.8062 - val_loss: 1.5397 - val_accuracy: 0.8134
+Epoch 9/10
+1360/1360 [==============================] - 291s 214ms/step - loss: 3.1632 - accuracy: 0.8145 - val_loss: 1.5543 - val_accuracy: 0.8196
+Epoch 10/10
+1360/1360 [==============================] - 291s 214ms/step - loss: 2.8792 - accuracy: 0.8210 - val_loss: 1.5851 - val_accuracy: 0.8227
+
+Keras CNN - accuracy: 0.8227011561393738
