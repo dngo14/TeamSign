@@ -6,7 +6,7 @@ from keras.preprocessing.image import ImageDataGenerator
 data_gen = ImageDataGenerator(samplewise_center=True, samplewise_std_normalization=True)
 
 # Loading the model.
-MODEL_NAME = "CNN_Model2.h5"  #########################################
+MODEL_NAME = "RNN_model.h5"  #########################################
 #MODEL_NAME = "RNN_model.h5" #########################################
 model = load_model(MODEL_NAME)
 
@@ -33,8 +33,8 @@ while(True):
     cropped_image = frame[0:FRAME_SIZE, 0:FRAME_SIZE]
     resized_frame = cv2.resize(cropped_image, (INPUT_SIZE, INPUT_SIZE))
     reshaped_frame = (np.array(resized_frame)).reshape((1, INPUT_SIZE, INPUT_SIZE, 3)) #CNN
-    #reshaped_frame = (np.array(resized_frame)).reshape((1, 1, INPUT_SIZE, INPUT_SIZE, 3)) #Add for LSTM
-    #frame_for_model = data_gen.standardize(np.float64(reshaped_frame))
+    reshaped_frame = (np.array(resized_frame)).reshape((1, 1, INPUT_SIZE, INPUT_SIZE, 3)) #Add for LSTM
+    frame_for_model = data_gen.standardize(np.float64(reshaped_frame))
 
     # Predicting the frame.
     prediction = np.array(model.predict(reshaped_frame))
